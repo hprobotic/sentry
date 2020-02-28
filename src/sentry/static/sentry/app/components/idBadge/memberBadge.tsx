@@ -61,7 +61,7 @@ const MemberBadge = ({
       <StyledAvatar user={user} size={avatarSize} />
       <StyledNameAndEmail>
         <StyledName
-          useLink={useLink && orgId}
+          useLink={useLink && !!orgId}
           hideEmail={hideEmail}
           to={member && orgId && `/settings/${orgId}/members/${member.id}/`}
         >
@@ -107,9 +107,9 @@ const StyledEmail = styled('div')`
 type NameProps = {
   useLink: boolean;
   hideEmail: boolean;
-} & Link['props'];
+} & React.ComponentProps<typeof Link>;
 
-const StyledName = styled<NameProps>(({useLink, to, ...props}) => {
+const StyledName = styled(({useLink, to, ...props}: NameProps) => {
   const forwardProps = omit(props, 'hideEmail');
   return useLink ? <Link to={to} {...forwardProps} /> : <span {...forwardProps} />;
 })`

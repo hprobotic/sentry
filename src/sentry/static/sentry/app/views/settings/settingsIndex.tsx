@@ -340,23 +340,20 @@ const ExternalHomeLink = styled(
   ${p => p.isCentered && flexCenter};
 `;
 
-type SupportLinkProps = {
-  isOnPremise: boolean;
+type SupportLinkProps<T extends boolean> = {
+  isOnPremise: T;
   href: string;
   to: string;
   isCentered?: boolean;
-} & (
-  | ({isOnPremise: true} & React.ComponentProps<typeof ExternalLink>)
-  | ({isOnPremise: false} & React.ComponentProps<typeof HomeLink>)
-);
+} & React.ComponentProps<T extends true ? typeof ExternalLink : typeof HomeLink>;
 
-const SupportLinkComponent = ({
+const SupportLinkComponent = <T extends boolean>({
   isCentered,
   isOnPremise,
   href,
   to,
   ...props
-}: SupportLinkProps) => {
+}: SupportLinkProps<T>) => {
   if (isOnPremise) {
     return <ExternalHomeLink isCentered={isCentered} href={href} {...props} />;
   }

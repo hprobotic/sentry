@@ -250,22 +250,15 @@ exports[`ProjectPlugins renders 1`] = `
                                       key="2"
                                       to="/settings/org-slug/integrations"
                                     >
-                                      <Link
-                                        onlyActiveOnIndex={false}
-                                        style={Object {}}
-                                        to="/settings/org-slug/integrations"
+                                      <a
+                                        href="/settings/org-slug/integrations"
                                       >
-                                        <a
-                                          onClick={[Function]}
-                                          style={Object {}}
+                                        <span
+                                          key="1"
                                         >
-                                          <span
-                                            key="1"
-                                          >
-                                            organization integrations
-                                          </span>
-                                        </a>
-                                      </Link>
+                                          organization integrations
+                                        </span>
+                                      </a>
                                     </Link>
                                     <span
                                       key="3"

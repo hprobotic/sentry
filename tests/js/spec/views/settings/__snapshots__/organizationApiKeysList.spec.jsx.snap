@@ -278,22 +278,15 @@ exports[`OrganizationApiKeysList renders 1`] = `
           key="2"
           to="/settings/account/api/auth-tokens/"
         >
-          <Link
-            onlyActiveOnIndex={false}
-            style={Object {}}
-            to="/settings/account/api/auth-tokens/"
+          <a
+            href="/settings/account/api/auth-tokens/"
           >
-            <a
-              onClick={[Function]}
-              style={Object {}}
+            <span
+              key="1"
             >
-              <span
-                key="1"
-              >
-                Auth Tokens
-              </span>
-            </a>
-          </Link>
+              Auth Tokens
+            </span>
+          </a>
         </Link>
         <span
           key="3"
@@ -393,18 +386,11 @@ exports[`OrganizationApiKeysList renders 1`] = `
                             <Link
                               to="/organizations/org-slug/api-keys/1/"
                             >
-                              <Link
-                                onlyActiveOnIndex={false}
-                                style={Object {}}
-                                to="/organizations/org-slug/api-keys/1/"
+                              <a
+                                href="/organizations/org-slug/api-keys/1/"
                               >
-                                <a
-                                  onClick={[Function]}
-                                  style={Object {}}
-                                >
-                                  Default
-                                </a>
-                              </Link>
+                                Default
+                              </a>
                             </Link>
                           </div>
                         </Styled(div)>
@@ -453,15 +439,22 @@ exports[`OrganizationApiKeysList renders 1`] = `
                             priority="primary"
                             stopPropagation={false}
                           >
-                            <a
+                            <Link
                               className="btn btn-default btn-sm"
                               onClick={[Function]}
                               title="Remove API Key?"
                             >
-                              <span
-                                className="icon-trash"
-                              />
-                            </a>
+                              <a
+                                className="btn btn-default btn-sm"
+                                href="#"
+                                onClick={[Function]}
+                                title="Remove API Key?"
+                              >
+                                <span
+                                  className="icon-trash"
+                                />
+                              </a>
+                            </Link>
                             <Modal
                               animation={false}
                               autoFocus={true}

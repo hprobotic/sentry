@@ -309,17 +309,25 @@ exports[`Issues -> Merged View renders with mocked data 1`] = `
                             priority="primary"
                             stopPropagation={false}
                           >
-                            <a
+                            <Link
                               className="btn btn-sm btn-default disabled"
                               disabled={true}
                               onClick={[Function]}
                               title="Unmerging 0 events"
                             >
-                              Unmerge
-                               (
-                              0
-                              )
-                            </a>
+                              <a
+                                className="btn btn-sm btn-default disabled"
+                                disabled={true}
+                                href="#"
+                                onClick={[Function]}
+                                title="Unmerging 0 events"
+                              >
+                                Unmerge
+                                 (
+                                0
+                                )
+                              </a>
+                            </Link>
                             <Modal
                               animation={false}
                               autoFocus={true}

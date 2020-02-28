@@ -322,15 +322,8 @@ exports[`OrganizationProjects should render the projects in the store 1`] = `
                                 Array [
                                   "/organizations/org-slug/projects/new/",
                                 ],
-                                Array [
-                                  "/settings/org-slug/projects/project-slug/",
-                                ],
                               ],
                               "results": Array [
-                                Object {
-                                  "type": "return",
-                                  "value": undefined,
-                                },
                                 Object {
                                   "type": "return",
                                   "value": undefined,
@@ -634,41 +627,34 @@ exports[`OrganizationProjects should render the projects in the store 1`] = `
                                       <Link
                                         to="/settings/org-slug/projects/project-slug/"
                                       >
-                                        <Link
-                                          onlyActiveOnIndex={false}
-                                          style={Object {}}
-                                          to="/settings/org-slug/projects/project-slug/"
+                                        <a
+                                          href="/settings/org-slug/projects/project-slug/"
                                         >
-                                          <a
-                                            onClick={[Function]}
-                                            style={Object {}}
-                                          >
-                                            <ProjectLabel
-                                              project={
-                                                Object {
-                                                  "environments": Array [],
-                                                  "hasAccess": true,
-                                                  "id": "2",
-                                                  "isBookmarked": false,
-                                                  "isMember": true,
-                                                  "name": "Project Name",
-                                                  "slug": "project-slug",
-                                                  "teams": Array [],
-                                                }
+                                          <ProjectLabel
+                                            project={
+                                              Object {
+                                                "environments": Array [],
+                                                "hasAccess": true,
+                                                "id": "2",
+                                                "isBookmarked": false,
+                                                "isMember": true,
+                                                "name": "Project Name",
+                                                "slug": "project-slug",
+                                                "teams": Array [],
                                               }
+                                            }
+                                          >
+                                            <span
+                                              className="project-label"
                                             >
                                               <span
-                                                className="project-label"
+                                                className="project-name"
                                               >
-                                                <span
-                                                  className="project-name"
-                                                >
-                                                  project-slug
-                                                </span>
+                                                project-slug
                                               </span>
-                                            </ProjectLabel>
-                                          </a>
-                                        </Link>
+                                            </span>
+                                          </ProjectLabel>
+                                        </a>
                                       </Link>
                                     </div>
                                   </Container>
