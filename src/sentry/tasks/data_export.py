@@ -186,7 +186,7 @@ def process_discover(data_export, file, limit):
             params=params,
             offset=offset,
             limit=limit,
-            referrer="api.organization-events-v2",
+            referrer="export.discover",
             auto_fields=True,
             use_aggregate_conditions=True,
         )
