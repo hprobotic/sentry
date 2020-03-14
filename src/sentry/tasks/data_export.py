@@ -203,7 +203,7 @@ def process_discover(data_export, file, limit):
     file_details = u"{}__{}".format(project.slug, data_export.id)
     file_name = get_file_name(ExportQueryType.DISCOVER_STR, file_details)
 
-    # Iterate through all the GroupTagValues
+    # Iterate through all the discover results.
     writer = create_writer(file, sample[0].keys())
     iteration = 0
     with snuba_error_handler():
