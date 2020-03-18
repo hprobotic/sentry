@@ -10,6 +10,8 @@ import overflowEllipsis from 'app/styles/overflowEllipsis';
 import space from 'app/styles/space';
 import SentryTypes from 'app/sentryTypes';
 
+type LinkProps = React.ComponentProps<typeof Link>;
+
 type Props = {
   avatarSize: UserAvatar['props']['size'];
   member: Member;
@@ -107,7 +109,7 @@ const StyledEmail = styled('div')`
 type NameProps = {
   useLink: boolean;
   hideEmail: boolean;
-} & React.ComponentProps<typeof Link>;
+} & LinkProps;
 
 const StyledName = styled(({useLink, to, ...props}: NameProps) => {
   const forwardProps = omit(props, 'hideEmail');

@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import styled from '@emotion/styled';
 import {css} from '@emotion/core';
+import omit from 'lodash/omit';
 
 import {t} from 'app/locale';
 import OrganizationAvatar from 'app/components/avatar/organizationAvatar';
@@ -324,11 +325,8 @@ const HomeLinkIcon = styled(HomeLink)`
 `;
 
 const ExternalHomeLink = styled(
-  ({
-    isCentered,
-    ...props
-  }: CenterableProps & React.ComponentProps<typeof ExternalLink>) => (
-    <ExternalLink {...props} />
+  (props: CenterableProps & React.ComponentProps<typeof ExternalLink>) => (
+    <ExternalLink {...omit(props, 'isCentered')} />
   )
 )<CenterableProps>`
   color: ${p => p.theme.purple};

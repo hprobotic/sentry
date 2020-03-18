@@ -22,8 +22,6 @@ const LabelHook = HookOrDefault({
 type Props = ReactRouter.WithRouterProps & {
   onClick?: (id: string, e: React.MouseEvent<HTMLAnchorElement>) => void;
   className?: string;
-
-  // TODO(ts): Replace with React.ComponentProps<typeof Link> when possible
   index?: boolean;
   href?: string;
   to?: string;
